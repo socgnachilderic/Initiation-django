@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import *
 
 # Create your views here.
 
 def homepage(request):
-    return HttpResponse("Bienvenu dans mon <strong> incroyable </strong> site")
+    return render(request, 'main/home.html', context={"tutoriel": Tutoriel.objects.all})
