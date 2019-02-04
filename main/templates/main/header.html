@@ -8,6 +8,7 @@
     {% load static %}
     {% include 'material/includes/material_css.html' %}
     <link rel="stylesheet" href=" {% static 'tinymce/css/prism.css' %} ">
+    <link rel="stylesheet" href=" {% static 'main/css/style.css' %} ">
     <title>Document</title>
 </head>
 
@@ -16,9 +17,9 @@
         <div class="nav-wrapper">
             <a href="#" class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="sass.html">Sass</a></li>
-                <li><a href="components.html">Components</a></li>
-                <li><a href="javascript.html">JavaScript</a></li>
+                <li><a href=" {% url 'main:homepage' %} ">Accueil</a></li>
+                <li><a href=" {% url 'main:register' %} ">Inscription</a></li>
+                <li><a href=" {% url 'main:login' %} ">Connexion</a></li>
             </ul>
         </div>
     </nav>

@@ -1,0 +1,17 @@
+{% extends "main/header.html" %}
+
+
+{% block content %}
+    {% load material_form %}
+    <div class="container">
+        <br>
+        <form action="" method="POST" class="card-panel">
+            {% csrf_token %}
+            {% form form=form %}
+            {% endform %}
+            <br>
+            <button class="btn right" type="submit">S'inscrire</button>
+            <p> Si tu as déja un compte, <a href="/login.html">Connexion</a> </p>
+        </form>
+    </div>
+{% endblock content %}
